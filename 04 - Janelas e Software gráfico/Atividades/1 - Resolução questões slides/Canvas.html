@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Computação gráfica - Clésio</title>
+		<script>
+			window.onload = function() {
+			// Aqui trabalharemos com o Canvas
+			}
+		</script>
+	</head>
+
+	<body>
+		<p><b>Desenhe na Viewport a abaixo o triângulo (10,10)-(20,50)-(30-
+			10). Estas coordenadas referem-se ao modelo do triângulo no
+			universo. Considere cada uma das windows especificadas.</b>
+			<br>Window : (0,0)-(100,200)
+			<br>Window : (0,0)-(200,100)
+			<br>Window : (0,0)-(1000,60)
+		</p>
+		<canvas id="meu_canvas" width="2000" height="2000"></canvas>
+		<script>
+			
+			// Canvas e contexto
+			var canvas = document.getElementById('meu_canvas');
+			var context = canvas.getContext('2d');
+
+			// Triângulo
+
+			// Iniciar o caminho (apaga desenhos anteriores)
+			context.beginPath();
+			
+			// Desenhar um triangulo
+			context.moveTo(10, 10); // Ponto inicial
+			context.lineTo(20, 50);
+			context.lineTo(30, 10);
+			context.lineTo(10, 10);
+
+			// Configurar a linha
+			context.lineWidth = 2;
+			context.strokeStyle = 'red';
+
+			// Preenchimento vermelho
+			context.fillStyle = 'red';
+			context.fill();
+
+			// Traçar as linhas do caminho
+			context.stroke();
+
+			var context2 = canvas.getContext('2d');
+			context2.beginPath();
+
+			// Contorno azul, com espessura de 3px
+			context2.lineWidth = 4;
+			context2.strokeStyle = 'blue';
+			context2.strokeRect(0, 0, 100, 200);
+
+			var context3 = canvas.getContext('2d');
+			context3.beginPath();
+
+			// Desenhar um triangulo
+			context.moveTo(10, 10+250); // Ponto inicial
+			context.lineTo(20, 50+250);
+			context.lineTo(30, 10+250);
+			context.lineTo(10, 10+250);
+
+			// Configurar a linha
+			context.lineWidth = 2;
+			context.strokeStyle = 'red';
+
+			// Preenchimento vermelho
+			context.fillStyle = 'red';
+			context.fill();
+
+			// Traçar as linhas do caminho
+			context.stroke();
+
+			// Contorno azul, com espessura de 3px
+			context3.lineWidth = 2;
+			context3.strokeStyle = 'black';
+			context3.strokeRect(0, 250, 200, 100);
+
+			var context4 = canvas.getContext('2d');
+			context4.beginPath();
+
+			// Desenhar um triangulo
+			context.moveTo(10, 10+400); // Ponto inicial
+			context.lineTo(20, 50+400);
+			context.lineTo(30, 10+400);
+			context.lineTo(10, 10+400);
+
+			// Configurar a linha
+			context.lineWidth = 2;
+			context.strokeStyle = 'red';
+
+			// Preenchimento vermelho
+			context.fillStyle = 'red';
+			context.fill();
+
+			// Traçar as linhas do caminho
+			context.stroke();
+
+			// Contorno azul, com espessura de 3px
+			context4.lineWidth = 2;
+			context4.strokeStyle = 'green';
+			context4.strokeRect(0, 400, 1000, 60);
+		</script>
+	</body>
+
+</html>

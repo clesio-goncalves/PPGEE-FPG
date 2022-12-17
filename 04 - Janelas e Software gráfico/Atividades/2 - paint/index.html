@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ferramenta Desenho - Canvas</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron" align="center">
+        <h1 class="display-4">Bem-vindo</h1>
+        <hr class="my-4">
+        <p class="lead">Esse é o protótipo de sistema com canvas HTML5 que permite desenhar interativamente primitivas:
+          Ponto; Linha; Poligono; Bezier; Círculos</p>
+      </div>
+
+      <div id="container">
+        <canvas id="imageView" width="800" height="400">
+          <p>O Navegador utilizado nao suporta html5 canvas</p>
+          <p>Por favor utilize outro browser (chrome, firefox, opera). </p>
+        </canvas>
+      </div>
+
+      <div class="container" align="center">
+
+        <!-- Ferramenta de Desenho:-->
+        <div class="form-group col-md-6" align="left" style="padding-top: 15px;">
+          <label for="dtool">Ferramenta de Desenho: <span class="obrigatorio">*</span></label>
+            <select id="dtool" class="form-control" required>
+              <option value="point">Ponto</option>
+              <option value="line">Linha</option>
+              <option value="polygon">Polígono</option>
+              <option value="bezier">Curva Bezier</option>
+              <option value="circle">Círculo</option>
+              <option value="rect">Retângulo</option>
+              <option value="pencil">Pincel</option>
+            </select>
+        </div>
+        
+        <!-- Caso seja poligno -->
+        <div class="form-group col-md-6" align="left">
+          <label class="col-form-label" for="edge">Caso selecione Polígono, informe o número de arestas:</label>
+          <input type="number" class="form-control" id="edge" value="3">
+        </div>
+
+        <!-- Campo para escrita das coordenadas -->
+        <p id="coordenadas_desenho"></p>
+        <p id="x_desenho"></p>
+        <p id="y_desenho"></p>
+      </div>
+
+    </div>
+  </body>
+</html>

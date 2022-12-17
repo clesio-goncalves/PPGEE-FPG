@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformações</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+  <canvas width="800" height="400" id="transformacoes_canvas"></canvas>
+
+  <!-- TRANSFORMAÇÕES -->
+  <div class="row">
+   <div class="form-group col-md-3">
+      <label for="transformacoes" class="form-label">Selecione a transformação desejada:</label>
+      <select class="form-select" id="transformacoes">
+        <option value="desenha">Desenhar</option>
+        <option value="translacao">Transladar</option>
+        <option value="escalar">Esclar</option>
+        <option value="refletir">Reflexão</option>
+        <option value="rotacionar">Rotacionar</option>
+        <option value="cizalhar">Cizalhar</option>
+      </select>
+    </div>
+
+    <!-- SELEÇÃO DO EIXO PARA ESPELHAR -->
+    <div class="form-group col-md-2" id="div_eixo">
+      <label for="eixo_refletir" class="form-label">Selecione o eixo: </label>
+      <select class="form-select" id="eixo_refletir">
+        <option value="x">eixo X</option>
+        <option value="y">eixo Y</option>
+        <option value="xy">eixo XY</option>
+      </select>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Campo para escrita das coordenadas -->
+  <div id="coordenadas">
+
+  </div>
+
+  <script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

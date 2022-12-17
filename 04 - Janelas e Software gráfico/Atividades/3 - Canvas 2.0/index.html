@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Canvas 2.0</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+
+    <body>
+        <canvas id="canvas" width="800" height="500"></canvas><br><br>
+    
+        <div class="form-group">
+            <div class="form-group col-md-4">
+              <label for="arquivo">Selecione um arquivo (.jpg, .jpeg, .png, .txt):</label>
+              <input type="file" id="arquivo" name="arquivo" accept=".jpg, .jpeg, .png, .txt" class="form-control"><br><br>
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="upload()">Upload arquivo</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg" onclick="novaMascara()">Nova marcação</button>
+                <button type="button" class="btn btn-outline-success btn-lg" onclick="salvaCoordenadas()">Salvar coordenadas</button>
+            </div>
+
+        </div>
+    </body>
+</html>

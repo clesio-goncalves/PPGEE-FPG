@@ -1,0 +1,26 @@
+body {
+	padding-top: 15px;
+}
+
+#container { 
+	position: relative; 
+	padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+    height: 400px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#imageView { 
+	border: 1px solid #000; 
+}
+
+#imageTemp { 
+	position: absolute; 
+	top: 1px; 
+	left: 1px; 
+}
